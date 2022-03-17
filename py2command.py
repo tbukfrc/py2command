@@ -36,10 +36,13 @@ def nbt_parser(nbt):
                     name_lore = entry.split(',')
                     name = name_lore[0].replace('Name=', '')
                     nbt_listed.append(
-                        r"display:{Name:'" + '[{' + '"text":' + name + ":," + 'italic' + ":false}]'" + ",Lore:['" + '[{'
+                        r"display:{Name:'" + '[{' + '"text":"' + name + '",' + '"italic"' + ":false}]'" + ",Lore:['" + '[{'
                         + '"text":"' +
                         name_lore[1] + '","italic":false}]' + "']}")
                     nbt_listed.append(',')
+                else:
+                    name = entry.replace('Name=', '')
+                    nbt_listed.append(r"display:{Name:'"+'[{"text":"'+name+'","italic":false}]'+"'}")
             elif entry.startswith('Enchant='):
                 if ',' in entry:
                     enchant = entry.replace('Enchant=', '')

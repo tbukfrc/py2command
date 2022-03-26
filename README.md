@@ -14,4 +14,4 @@ In game: `give @p minecraft:stick{display:{Name:'[{"text":"Knockback Stick","ita
 
 With py2command: `p2c.give('@p', 'stick', ['Name=Knockback Stick,A stick with extreme knockback', 'Enchant=knockback:15,mending:1', 'Unbreakable'], 1)`
 
-py2command takes the command and automatically parses and converts it into something you can paste into Minecraft. Think of it as multiple command generators built-in to one Python module, with a system to automagically convert them to command blocks (coming soon).
+py2command takes the command and automatically parses and converts it into something you can paste into Minecraft. Think of it as multiple command generators built-in to one Python module, with a system to automagically convert them to command blocks.
